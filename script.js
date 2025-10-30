@@ -16,8 +16,8 @@ async function fetchVisitCount(increment = false) {
   }
 }
 
-// Increment count only once per page visit
+// Increment once per visit (first load)
 window.onload = () => fetchVisitCount(true);
 
-// Refresh display every 5 seconds (no increment)
+// Auto-refresh every 5 seconds without incrementing
 setInterval(() => fetchVisitCount(false), 5000);
